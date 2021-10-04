@@ -1,0 +1,98 @@
+<div class="proponente">
+  <header>
+    <h1>Insira seus dados para uma análise completa</h1><img id="img2" src="assets/img/everis-logo.png">
+  </header>
+  <div class="dados1">
+    <form [formGroup]="meuFormGroup">
+    <label for="inlineFormInputName2" class="form-label">Nome Completo</label>
+    <input type="text" class="form-control" formControlName="nome" required>
+    <ng-container *ngIf="meuFormGroup.controls.nome.touched">
+      <span *ngIf="meuFormGroup.controls.nome.errors">
+          Campo obrigatório
+      </span>
+  </ng-container>
+  </form>
+<br>
+<form [formGroup]="meuFormGroup">
+    <label for="exampleInputPassword1" class="form-label">C.P.F</label>
+    <input type="text" class="form-control" id="cpf" formControlName="cpf" maxlength="14" mask="000.000.000-00"required/>
+    <ng-container *ngIf="meuFormGroup.controls.nome.touched">
+      <span *ngIf="meuFormGroup.controls.nome.errors">
+          Campo obrigatório
+      </span>
+  </ng-container>
+</form>
+<br>
+<form [formGroup]="meuFormGroup">
+    <label class="form-label">Data de Nascimento</label>
+    <input type="date" class="form-control" formControlName="datanascimento" required>
+    <ng-container *ngIf="meuFormGroup.controls.nome.touched">
+      <span *ngIf="meuFormGroup.controls.nome.errors">
+          Campo obrigatório
+      </span>
+  </ng-container>
+</form>
+<br>
+<form [formGroup]="meuFormGroup">
+    <label for="exampleInputcel" class="form-label">Celular</label>
+    <input type="tel" class="form-control" id="exampleInputcel" formControlName="phone" prefix="+55" mask="(00) 00000-0000" required/>
+    <ng-container *ngIf="meuFormGroup.controls.nome.touched">
+      <span *ngIf="meuFormGroup.controls.nome.errors">
+          Campo obrigatório
+      </span>
+  </ng-container>
+  </form>
+  </div>
+<br>
+  <div class="dados2">
+    <form [formGroup]="meuFormGroup">
+    <label for="exampleInputemail" class="form-label">E-mail</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email" required >
+    <ng-container *ngIf="meuFormGroup.controls.email.touched">
+      <span *ngIf="meuFormGroup.controls.email.errors?.required">
+          Campo obrigatório
+      </span>
+      <span *ngIf="meuFormGroup.controls.email.errors?.email">
+          E-mail inválido
+      </span>
+  </ng-container>
+  </form>
+<br>
+<form [formGroup]="meuFormGroup">
+    <label for="inlineFormInputName2" class="form-label">Profissão</label>
+    <input type="email" class="form-control" id="inlineFormInputName2" formControlName="profissao" required>
+    <ng-container *ngIf="meuFormGroup.controls.nome.touched">
+      <span *ngIf="meuFormGroup.controls.nome.errors">
+          Campo obrigatório
+      </span>
+  </ng-container>
+</form>
+<br>
+    <label for="inlineFormInputName2" class="form-label">Endereço </label>
+    <input type="email" class="form-control" id="inlineFormInputName2" formControlName="endereco" required>
+    <ng-container *ngIf="meuFormGroup.controls.nome.touched">
+      <span *ngIf="meuFormGroup.controls.nome.errors">
+          Campo obrigatório
+      </span>
+    </ng-container>
+    <div class="form-group">
+      <label for="exampleFormControlFile1">Insira seu comprovante</label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1" required >
+    </div>
+
+    <form [formGroup]="meuFormGroup">
+    <label for="exampleInputemail" class="form-label">Renda Mensal</label>
+    <input type="number"  class="form-control" id="num1" formControlName="nome" />
+    <ng-container *ngIf="meuFormGroup.controls.nome.touched">
+      <span *ngIf="meuFormGroup.controls.nome.errors">
+        Campo obrigatório
+      </span>
+  </ng-container>
+
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Insira seu comprovante</label>
+    <input class="num1" type="file" class="form-control-file" id="exampleFormControlFile1" required>
+  <button routerLink="/inserir"type="submit" class="btn-btn2"(click)="salvar()">INSERIR PROPONENTE</button>
+  <button routerLink="/dados-imovel"type="submit" class="btn-btn"(click)="salvar()" >INSERIR DADOS DO IMOVEL</button>
+</div>
+</form>

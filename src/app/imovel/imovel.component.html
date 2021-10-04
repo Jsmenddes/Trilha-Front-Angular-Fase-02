@@ -1,0 +1,41 @@
+
+<div class="imovel">
+  <header>
+    <h1>Insira dados do Imóvel</h1><img id="img2" src="assets/img/everis-logo.png">
+  </header>
+  <div class="dados-imovel-1">
+
+    <form [formGroup]="meuFormGroup">
+      <select class="custom-select custom-select-lg mb-3" id="tipo" >
+        <option selected>Tipo do Imóvel</option>
+        <option value="1">Residencial</option>
+        <option value="1">Comercial</option>
+      </select>
+
+    </form>
+  <br>
+  <form [formGroup]="meuFormGroup">
+    <label for="exampleInputPassword1" class="form-label">Valor do Imóvel</label>
+    <input type="number" class="form-control" id="vimovel" value="" formControlName="vimovel" thousandSeparator="." />
+    <ng-container *ngIf="meuFormGroup.controls.nome.touched">
+      <span *ngIf="meuFormGroup.controls.nome.errors">
+          Campo obrigatório
+      </span>
+  </ng-container>
+  </form>
+<br>
+
+<form [formGroup]="meuFormGroup">
+    <label for="prazo-sim" id="prazo-sim" class="form-label">Em quantas parcelas deseja pagar?</label>
+    <input type="number" class="form-control" id="parc" value="" formControlName="parcelas">
+    <ng-container *ngIf="meuFormGroup.controls.nome.touched">
+      <span *ngIf="meuFormGroup.controls.nome.errors">
+          Mínimo de parcelas: 360!
+      </span>
+  </ng-container>
+  </form>
+<br>
+  </div>
+<div class="btn-4">
+  <button routerLink="/simular"type="submit" class="btn-btn" formControlName="simular" value="soma" (click)="simular()">SIMULAR</button>
+</div>

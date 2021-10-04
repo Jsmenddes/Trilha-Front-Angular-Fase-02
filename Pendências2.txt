@@ -1,0 +1,7 @@
+Pendências
+validação dos campos e tipo do campo
+desabilitar botão caso campos não estejam preenchidos
+arrumar o formgroup
+formato de moeda nas rendas
+criar regra de negocio para que quesitos sejam atendidos na simulação
+testes unitarios

@@ -1,0 +1,100 @@
+li {
+  list-style-type: square;
+  font-size: 25px;
+  margin: 20px 0px 0px 350px;
+  width: 100%;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+h2 {
+  width: 100%;
+  color: white;
+  text-align: justify;
+  margin: 0px 0px 150px 450px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#img2 {
+  position: fixed;
+  width:20%;
+  margin:0px 0px 0px 100px
+}
+#img3 {
+  width: 50%;
+  width: 10%;
+  position: relative;
+
+}
+#repro {
+  color: rgb(185, 46, 46);
+  font-size: 20px;
+  background:#9bae04;
+  border-radius: 10px;
+  height: 15%;
+  width: 23%;
+  position: relative;
+  margin-left: 450px;
+  margin-top: -50px;
+  font-weight: bold;
+
+}
+header {
+  height: 50px;
+}
+#credito {
+  font-size: 20px;
+  background:#9bae04;
+  color: rgb(41, 43, 41);
+  border-radius: 10px;
+  height: 15%;
+  width: 23%;
+  margin-left: 450px;
+  margin-top: 50px;
+  font-weight: bold;
+
+}
+@media screen and (max-width: 600px)  {
+
+  #img2 {
+    position: fixed;
+    width: 25%;
+    margin:0px 0px 0px 100px
+  }
+li {
+  width: 100%;
+  margin:0px 0px 0px 80px;
+  font-size: 22px;
+  text-align: center;
+}
+h2 {
+  width: 100%;
+  margin:100px 0px 50px 150px;
+  font-size: 22px;
+
+}
+@media screen and (max-width: 360px)  {
+
+  body {
+    overflow: hidden;
+  }
+  #img2 {
+    position: fixed;
+    width: 45%;
+    margin:0px 0px 0px 70px
+  }
+
+  li {
+    width: 80%;
+    font-size: 18px;
+    margin:0px 0px 0px 10px
+
+  }
+  h2 {
+    width: 80%;
+    font-size: 18px;
+    margin:100px 0px 0px 50px
+  }
+
+
+}
+}
