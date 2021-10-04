@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { MsgerrorService } from '../services/msgerror.service'
 import { Store } from '@ngrx/store';
-import { simular } from '../simple.action';
+import { simular } from '../../store/simple.action';
 
 @Component({
   selector: 'app-imovel',
@@ -11,7 +10,7 @@ import { simular } from '../simple.action';
 })
 export class ImovelComponent {
 
-url: string = 'http//finaneveris.com';
+  url: string = 'http//finaneveris.com';
   meuFormGroup: FormGroup;
   renda: number=0
   parcelas:number=0
@@ -20,7 +19,7 @@ url: string = 'http//finaneveris.com';
   juros:number = 0.0085
 
 
-  constructor(private FormBuilder: FormBuilder,private msgerrorservice: MsgerrorService, private store: Store <{renda:any}>){
+  constructor(private FormBuilder: FormBuilder, private store: Store <{renda:any}>){
 
     this.meuFormGroup = this.FormBuilder.group({
       nome: ['', Validators.required],

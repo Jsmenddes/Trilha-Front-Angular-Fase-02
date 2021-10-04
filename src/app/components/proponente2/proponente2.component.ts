@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { MsgerrorService } from '../services/msgerror.service'
 
 import { Store } from '@ngrx/store';
-import { alterar } from '../simple.action'
+import { alterar } from 'src/app/store/simple.action'
 
 
 @Component({
@@ -18,7 +17,7 @@ export class Proponente2Component {
   meuFormGroup: FormGroup;
 
   constructor
-  (private FormBuilder: FormBuilder, private msgerrorservice: MsgerrorService,private store: Store<{renda:any}>) {
+  (private FormBuilder: FormBuilder,private store: Store<{renda:any}>) {
 
     this.meuFormGroup = this.FormBuilder.group({
       nome: ['', Validators.required],

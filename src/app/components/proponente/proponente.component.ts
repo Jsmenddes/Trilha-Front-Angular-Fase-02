@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl,Validators } from "@angular/forms";
-import { MsgerrorService } from '../services/msgerror.service'
 import { Store } from '@ngrx/store';
-import { alterar } from '../simple.action'
-import { Pipe, PipeTransform } from '@angular/core';
+import { alterar } from '../../store/simple.action'
 
 @Component({
   selector: 'app-proponente',
@@ -25,12 +23,23 @@ export class ProponenteComponent implements OnInit {
 
   public meuFormGroup: FormGroup;
 
-  constructor(private FormBuilder: FormBuilder,private msgerrorservice: MsgerrorService, private store: Store<{renda:any}>) {
+  constructor(private FormBuilder: FormBuilder, private store: Store<{renda:any}>) {
 
-    // this.meuFormGroup = this.FormBuilder.group({
-      this.meuFormGroup = MsgerrorService.meuFormGroup;
+    this.meuFormGroup = this.FormBuilder.group({
+      nome: ['', Validators.required],
+      cpf: ['', Validators.required],
+      datanascimento: ['', Validators.required],
+      celular: ['', Validators.required],
+      profissao: ['', Validators.required],
+      endereco: ['', Validators.required],
+      email: ['', [
+        Validators.required,
+        Validators.email
+    ]]
 
-    }
+});
+
+}
 
 ngOnInit(): void {
 

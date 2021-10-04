@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
-import { alterar } from "./simple.action"
-import { simular } from "./simple.action"
+import { alterar } from "../store/simple.action"
+import { simular } from "../store/simple.action"
 
 const _simpleReducer=createReducer (0,on (alterar,(state, action)=>(state=action.renda)))
 export function simpleReducer(state: any, action: any){
