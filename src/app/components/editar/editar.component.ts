@@ -10,8 +10,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EditarComponent implements OnInit {
 
-  users!: Dados;
 
+  users!: Dados;
 
   constructor(
     private dadosservice: DadosService,
@@ -20,14 +20,20 @@ export class EditarComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id')
+    this.dadosservice.readById(id!).subscribe(users => {
+      this.users = users
+    });
   }
 
 
 
   updateName(): void {
-
-  }
-
+    this.dadosservice.update(this.users).subscribe(() => {
+    this.dadosservice.showMessage('Usuário editado com sucesso!')
+    this.router.navigate(["usuario"]);
+  });
+}
   cancel(): void {
     this.router.navigate(['/usuario'])
   }

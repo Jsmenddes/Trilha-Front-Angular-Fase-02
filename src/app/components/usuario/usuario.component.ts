@@ -11,7 +11,7 @@ import { Dados } from './user.model';
 export class UsuarioComponent implements OnInit {
 
   users: Dados[] = [];
-  displayedColumns = ['name','age'];
+  displayedColumns = ['name','age', 'action'];
 
   constructor(private router: Router, private dadosservice:DadosService) { }
 

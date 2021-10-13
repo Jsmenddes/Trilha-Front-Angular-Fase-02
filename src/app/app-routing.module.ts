@@ -1,3 +1,4 @@
+import { ExcluirComponent } from './components/excluir/excluir.component';
 import { EditarComponent } from './components/editar/editar.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { AdicionarComponent } from './components/adicionar/adicionar.component';
@@ -8,7 +9,8 @@ const routes: Routes = [
   { path: '', component: UsuarioComponent},
   { path: "adicionar",component: AdicionarComponent},
   { path: "usuario",component: UsuarioComponent},
-  { path: "editar",component: EditarComponent}
+  { path: "editar/:id",component: EditarComponent},
+  { path: "excluir/:id",component: ExcluirComponent}
 
 ];
 

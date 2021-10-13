@@ -5,11 +5,13 @@ body {
 }
 
 button {
+  background:rgb(70, 70, 194);
+  box-shadow: gainsboro 2px;
   width: 20%;
   height: 50px;
   border-radius: 6px;
   margin: 0px 0px 0px 30px;
-  color: black;
+  color: white;
   font-size: 20px;
   font-weight: bold;
   font-family: 'Raleway', sans-serif;
@@ -29,6 +31,7 @@ table,td {
 
 }
 th{
+  font-weight:bold ;
   height: 20px;
   font-size: 18px;
   font-family: 'Raleway', sans-serif;
@@ -42,6 +45,21 @@ td {
   font-size: 18px;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
+  text-align: center;
 
 
 }
+.edit {
+  color:rgb(70, 70, 194);
+
+}
+.delete {
+  width: 100%;
+  color:rgb(240, 50, 50);
+
+}
+td.mat-cell.cdk-cell.cdk-column-name.mat-column-name {
+  text-align:start;
+
+}
+

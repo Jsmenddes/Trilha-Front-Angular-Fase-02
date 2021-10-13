@@ -9,9 +9,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DadosService {
-  readById(id: string | null) {
-    throw new Error('Method not implemented.');
-  }
 
   baseUrl = "http://localhost:3001/users"
 
@@ -30,13 +27,16 @@ create(users: Dados): Observable<Dados> {
 read(): Observable<Dados[]> {
   return this.http.get<Dados[]>(this.baseUrl)
 }
-readByid(id: string):Observable<Dados> {
+readById(id: string): Observable<Dados> {
   const url = `${this.baseUrl}/${id}`
   return this.http.get<Dados>(url)
 }
-update(users: Dados):Observable<Dados> {
-  const url = `${this.baseUrl}/${users.id}`;
+update(users:Dados): Observable<Dados> {
+  const url = `${this.baseUrl}/${users.id}`
   return this.http.put<Dados>(url,users)
-
+}
+delete(id:string): Observable<Dados> {
+  const url = `${this.baseUrl}/${id}`;
+  return this.http.delete<Dados>(url);
 }
 }
